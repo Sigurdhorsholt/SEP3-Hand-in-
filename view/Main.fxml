@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="660.0" prefWidth="1034.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
+   <children>
+      <BorderPane layoutX="183.0" layoutY="-153.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="348.0" prefWidth="197.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="addCountryBtn" layoutX="10.0" layoutY="59.0" mnemonicParsing="false" onAction="#SwitchAddCountry" prefHeight="45.0" prefWidth="200.0" style="-fx-border-style: none;" text="Add new country">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="seeGraphicsBtn" layoutX="15.0" layoutY="12.0" mnemonicParsing="false" onAction="#SwitchMacsGraphics" prefHeight="45.0" prefWidth="200.0" style="-fx-border-style: none;" text="MacsGraphic.fxml">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="seeCountriesOverviewBtn" layoutX="10.0" layoutY="59.0" mnemonicParsing="false" onAction="#SwitchCountryOverview" prefHeight="45.0" prefWidth="200.0" style="-fx-border-style: none;" text="ContriesOverview.fxml">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <Label alignment="CENTER" prefHeight="64.0" prefWidth="1036.0" style="-fx-background-color: #78a46b;" text="Home Page" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="446.0" text="List of all current Countries">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="countriesList" prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="printModelBtn" mnemonicParsing="false" onAction="#printModel" prefHeight="25.0" prefWidth="282.0" text="Print Model" />
+                  <Button fx:id="saveModelbtn" layoutX="10.0" layoutY="244.0" mnemonicParsing="false" onAction="#saveModel" prefHeight="25.0" prefWidth="282.0" text="Save Model" />
+                  <Button fx:id="loadModelBtn" layoutX="10.0" layoutY="269.0" mnemonicParsing="false" onAction="#loadModel" prefHeight="25.0" prefWidth="282.0" text="Load Saved Model" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
